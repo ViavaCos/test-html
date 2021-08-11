@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="./1.css"> -->
+  <link rel="stylesheet" href="./1_.css">
+  
+  <title>1</title>
+</head>
+<body>
+  <div class="fireworks_wrap"></div>
+  <div class="main"></div>
+  <div id="container">
+    <div class="firework-grp">
+      <div class="firework pos1 ">
+        <div class="drops-grp">
+          <span class="drop drop-1"></span>
+          <span class="drop drop-2"></span>
+          <span class="drop drop-3"></span>
+          <span class="drop drop-4"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./1.js"></script>
+  <script>
+    const someText = [
+      '我想我们要不还是做朋友吧，这也不是大冒险。经过这几天的相处下来就感觉自己好像还是不是很适合谈恋爱，心也放不到这上面来所以与其这样耗着你，我希望你能找到一个认认真真用心的人，真的很抱歉。',  
+      '我觉得未来还有很多可能，我们不应该就这样认定在一起，虽然和你在一起我很开心，但我觉得我应该更加努力，不然没有办法给你想要的未来，所以决定分开一段时间试试，也许会不一样，你也会遇见更好的人',  
+      '我们聊聊好吗？我们相处也有些时间了，但是对于恋爱关系来说，好像总是少了点什么。我不知道该怎么跟你聊天，大概是我们之间进展太快了，我意识到其实我们的共同话题很少很少。我们隔的太远了，如果连共同话题都没有，我们之间就没有什么联系能够让我们走下去了。我现在状态也不适合怎么样怎么样去谈恋爱处对象，隔着网线，也许能一起聊天，分享彼此的快乐就是最美好的事情了。你真的太好了，我被你吸引，以为我做好了恋爱的准备，但其实我还是太过于幼稚，甚至都没有好好了解过对方。只是凭着一时聊天的开心就在一起。这样的恋爱太不负责了。对不起，没有考虑清楚就轻易尝试，浪费了你的时间，真的对不起。',  
+      '我们的恋爱有些太仓促，我承认在一起的时候没有考虑清楚，在一起这么段时间还是觉得更适合做朋友。我们就这样吧，希望会有人比我更喜欢你',  
+      '说实话我现在的状态也不适合谈恋爱，我这个人毛病太多实在是不想耽误你，也不是不喜欢，可能是因为不够喜欢吧，我觉得我们之间的喜欢还没有到那一步，我觉得及时止损比较好，以免我不够喜欢你不够爱你不会照顾人给你造成伤害，我挺不会说话的但是能想到的都告诉你了，我们分开一段时间吧，就算为了大家好',  
+      '我还是直说吧，我觉得可能我们不太合适，不是你的原因，是我的问题，我现阶段真的不想谈恋爱，而且我也不是一个很喜欢聊天的人，有时候你给我发消息，我会有种不想回复的感觉，但是不回的话感觉又不太礼貌，所以有时候觉得有压力，我不太喜欢这种感觉，还是不耽误你的时间了，你条件啥的都挺好 m的，一定能找到合适',  
+      '对不起，我好像还是没学会爱人，经历了这么多。我真的真的很喜欢你，能和你在一起我好高兴。但是总觉得还是差点什么，肯定是我自己的问题吧，对不起你真的好好，我不能再继续拖着你',    ]
+    const typeWriter = {
+      msg: "",
+      len: function () {
+        return this.msg.length;
+      },
+      seq: 0,
+      speed: 100, //打字时间(ms)
+      type: function () {
+        const _this = this;
+        document.querySelector(".main").innerHTML = _this.msg.substring(0, _this.seq);
+        if (_this.seq == _this.len()) {
+          _this.seq = 0;
+          clearTimeout(timer);
+        } else {
+          _this.seq++;
+          timer = setTimeout(function () {
+            _this.type();
+          }, this.speed);
+        }
+      },
+    };
+    const msg = someText[Math.floor(Math.random() * 5)];
+    typeWriter.msg = msg;
+    typeWriter.type();
+  </script>
+</body>
+</html>
