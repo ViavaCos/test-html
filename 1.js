@@ -14,19 +14,21 @@ class Fireworks {
     rgb(${Math.ceil(Math.random() * 255)},
         ${Math.ceil(Math.random() * 255)}, 
         ${Math.ceil(Math.random() * 255)})
-     `;
+    `;
+      const randomDelay = `animation-delay: ${Math.random()}s;`;
+      const style = `color:${randomColor}; ${randomDelay}`;
 
     ['top', 'right', 'bottom', 'left'].forEach((direction,idx) => {
-      this[direction] = generateElement('div', randomColor, 'firework', `fireworks_${direction}`)
+      this[direction] = generateElement('div', style, 'firework', `fireworks_${direction}`)
       wrap.append(this[direction])
     })
     this.wrapper.append(wrap)
   }
 }
 
-function generateElement(elName, color = 'inherit', ...rest){
+function generateElement(elName, style, ...rest){
   const element = document.createElement(elName)
-  element.style.color = color
+  element.style = style
   rest.length && element.classList.add(...rest)
   return element
 }
