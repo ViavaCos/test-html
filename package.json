@@ -1,0 +1,20 @@
+{
+  "name": "test-html",
+  "version": "1.0.0",
+  "description": "仅供娱乐，并无恶意。谢谢",
+  "main": "1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViavaCos/test-html.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViavaCos/test-html/issues"
+  },
+  "homepage": "https://ViavaCos.github.io/test-html"
+}

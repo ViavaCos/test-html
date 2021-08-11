@@ -1,5 +1,5 @@
 # test-html
-A test repo.
+仅供娱乐，并无恶意。谢谢
 
 ## 声明
 
