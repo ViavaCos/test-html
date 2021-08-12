@@ -17,6 +17,13 @@ body {
     transform: translate(-50%, -50%);
   }
 
+  @media screen and (max-width:700px) {
+    .main {
+      max-width: unset;
+      width: 86vw;
+    }
+  }
+
 .fireworks_wrap {
   position: absolute;
   top: 0;
