@@ -36,6 +36,6 @@ function generateElement(elName, style, ...rest){
 // const F = new Fireworks()
 // console.log(F);
 
-for (let index = 0; index < 20; index++) {
-  new Fireworks()
-}
+// for (let index = 0; index < 20; index++) {
+//   new Fireworks()
+// }

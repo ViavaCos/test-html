@@ -1,10 +1,29 @@
 html,
 body {
+  margin: 0;
+  padding: 0;
   background-color: lightpink;
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+
+.wrap {
+  overflow: hidden;
+  opacity: 0.5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrap::after{
+  content: '';
+  position: absolute;
+  left: 5.2em;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
 }
 
 .main {

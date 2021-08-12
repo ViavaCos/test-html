@@ -4,26 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" href="./1.css"> -->
   <link rel="stylesheet" href="./1_.css">
   
-  <title>1</title>
+  <title>七夕快乐</title>
 </head>
 <body>
-  <!-- <div class="fireworks_wrap"></div> -->
   <div class="main"></div>
-  <!-- <div id="container">
-    <div class="firework-grp">
-      <div class="firework pos1 ">
-        <div class="drops-grp">
-          <span class="drop drop-1"></span>
-          <span class="drop drop-2"></span>
-          <span class="drop drop-3"></span>
-          <span class="drop drop-4"></span>
-        </div>
-      </div>
-    </div>
-  </div> -->
   <script src="./1.js"></script>
   <script>
     const someText = [
@@ -55,6 +41,11 @@
         }
       },
     };
+
+
+    for (let index = 0; index < 20; index++) {
+      new Fireworks()
+    }
     const msg = someText[Math.floor(Math.random() * 5)];
     typeWriter.msg = msg;
     typeWriter.type();
